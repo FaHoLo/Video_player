@@ -6,7 +6,7 @@
 
 ![Player gif](example.gif)
 
-[Сайт плеера](https://faholo.github.io/Video_player/) 
+[Сайт плеера](https://faholo.github.io/Video_player/index.html) 
 
 ### Установка
 
