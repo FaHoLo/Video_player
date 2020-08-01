@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- Icon tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/ico/favicon-16x16.png">
+    <link rel="manifest" href="./static/ico/site.webmanifest">
+    <link rel="mask-icon" href="./static/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./static/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="./static/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome 4 -->
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+
+    <!-- CSS styles -->
+    <style type="text/css">
+      .video-player {
+        width: 800px;
+        height: 600px;
+        box-shadow: 0 0 20px rgb(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+      }
+      .js-video-container {
+        flex-grow: 1;
+      }
+      .player-buttons-wrapper {
+        background-color: black;
+        display: flex;
+      }
+      .player-button {
+        border-style: hidden;
+        background-color: transparent;
+        padding: 5px 10px;
+      }
+      .fa {
+        color: white;
+        font-size: x-large;
+      }
+      .empty-space {
+        flex-grow: 1;
+      }
+    </style>
+
+    <title>VideoPlayer</title>
+  </head>
+  <body>
+    <div class="video-player" id="player">
+      <div class="js-video-container"></div>
+
+      <div class="player-buttons-wrapper">
+        <button class="js-play-button player-button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class="js-pause-button player-button" hidden>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class="js-mute-button player-button">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button class="js-volume-button player-button" hidden>
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
+        <div class="empty-space"></div>
+        <button class="js-fullscreen-button player-button">
+          <i class="fa fa-expand" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <script src="./static/js/jquery-3.4.1.min.js"></script>
+    <script src="./static/js/playable.bundle.min.js"></script>
+    <script src="./static/js/player.js"></script>
+  
+    <script type="text/javascript">
+      createPlayer({elementId: 'player'});
+    </script>
+  
+  </body>
+</html>
